@@ -1,0 +1,20 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up routing with TanStack Router, theme provider, and includes all page routes including the new /sell route for product submission.",
+  "frontend/src/components/Layout.tsx": "Root layout component with header navigation displaying \"Dino Squad\" branding, a new \"Sell\" button in the header, hero banner, main content outlet, and footer with social links and attribution.",
+  "frontend/src/components/LoginButton.tsx": "Authentication button component that handles Internet Identity login/logout with proper state management and query cache clearing.",
+  "frontend/src/components/ProfileSetup.tsx": "Modal dialog that prompts authenticated users to set up their profile name on first login.",
+  "frontend/src/components/CartIcon.tsx": "Shopping cart icon button with badge showing item count, navigates to cart page on click.",
+  "frontend/src/components/StripeSetup.tsx": "Admin-only modal for configuring Stripe payment settings (secret key and allowed countries).",
+  "frontend/src/pages/ProductCatalog.tsx": "Main shop page displaying all products in a grid with category filters (All/Paper Squishies/Slime), using type-safe navigation with params for product links.",
+  "frontend/src/pages/ProductDetail.tsx": "Individual product page showing images, description, price, variant selection, quantity picker, and add to cart functionality.",
+  "frontend/src/pages/CartPage.tsx": "Shopping cart page displaying cart items with quantities, prices, remove functionality, and checkout button.",
+  "frontend/src/pages/Checkout.tsx": "Checkout page with shipping information form and order summary, integrates with Stripe for payment processing.",
+  "frontend/src/pages/PaymentSuccess.tsx": "Success page displayed after successful Stripe payment, clears cart cache and shows confirmation message.",
+  "frontend/src/pages/PaymentFailure.tsx": "Failure page displayed when Stripe payment fails, provides options to retry or return to cart.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for all backend operations including products, cart, orders, user profiles, Stripe configuration, and the new useSubmitProductForApproval mutation hook for seller product submissions.",
+  "frontend/src/hooks/useCreateCheckoutSession.ts": "React Query mutation hook for creating Stripe checkout sessions with proper URL validation.",
+  "frontend/src/index.css": "Global styles with playful pink-purple-blue OKLCH color system for both light and dark modes, optimized for a fun squishy/slime aesthetic.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color palette, border radius values, shadows, and animations for the playful design system.",
+  "frontend/index.html": "HTML entry point with updated page title \"Dino Squad\" displayed in browser tab.",
+  "frontend/src/pages/SellPage.tsx": "Seller product submission page with a form for authenticated users to list products including name, description, price, category selection, and image upload that converts images to base64 data URLs; displays success/error toasts and clears form after successful submission."
+}

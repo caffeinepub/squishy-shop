@@ -1,0 +1,73 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-sell-button-to-the-main-navigation-header-in-the-layout-component-positioned-alongside-the-existing-cart-and-login-buttons",
+      "featureTitle": "Add a 'Sell' button to the main navigation header in the Layout component, positioned alongside the existing Cart and Login buttons",
+      "files": [
+        "frontend/src/components/Layout.tsx"
+      ],
+      "components": [
+        "stripe@3.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-12"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-new-sell-page-route-and-component-that-allows-users-to-list-items-for-sale-including-fields-for-product-name-description-price-category-paper-squishies-or-slime-and-image-upload-capability",
+      "featureTitle": "Create a new Sell page route and component that allows users to list items for sale, including fields for product name, description, price, category (Paper Squishies or Slime), and image upload capability",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/SellPage.tsx"
+      ],
+      "components": [
+        "stripe@3.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-13"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-connect-the-sell-page-form-to-the-backend-actor-to-submit-new-product-listings-when-users-click-a-submit-for-approval-button",
+      "featureTitle": "Connect the Sell page form to the backend actor to submit new product listings when users click a 'Submit for Approval' button",
+      "files": [
+        "frontend/src/hooks/useQueries.ts",
+        "frontend/src/pages/SellPage.tsx"
+      ],
+      "components": [
+        "stripe@3.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0",
+        "http-outcalls@3.0.0",
+        "authorization@4.0.0",
+        "blob-storage@4.0.0"
+      ],
+      "testIds": [
+        "REQ-15"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

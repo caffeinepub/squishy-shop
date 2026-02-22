@@ -1,0 +1,89 @@
+{
+  "kind": "build_request",
+  "title": "Add sell button to the interface",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "text": "Add a 'Sell' button to the main navigation header in the Layout component, positioned alongside the existing Cart and Login buttons",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Thanks add a sell buttion"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A 'Sell' button is visible in the header navigation",
+        "The button styling matches the existing navigation button pattern",
+        "The button is positioned logically within the header layout"
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Create a new Sell page route and component that allows users to list items for sale, including fields for product name, description, price, category (Paper Squishies or Slime), and image upload capability",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A new route '/sell' is configured in the router",
+        "The Sell page includes a form with all required fields",
+        "Form validation ensures all required fields are completed",
+        "The page follows the existing Dino Squad visual theme"
+      ]
+    },
+    {
+      "id": "REQ-14",
+      "text": "Implement backend functionality to accept and store seller product submissions, including product details, seller information (linked to Internet Identity), and approval status",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend method accepts product submission data from authenticated users",
+        "Submitted products are stored with pending approval status",
+        "Seller identity is captured from the authenticated principal",
+        "Product submission data includes all form fields from the frontend"
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "text": "Connect the Sell page form to the backend actor to submit new product listings when users click a 'Submit for Approval' button",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Form submission calls the backend actor method",
+        "Success confirmation is displayed to the user after submission",
+        "Error handling displays appropriate messages if submission fails",
+        "Form is cleared after successful submission"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use the existing Internet Identity authentication system for seller identity",
+    "Follow the single-actor backend architecture pattern",
+    "Maintain the existing Dino Squad visual theme and color scheme",
+    "Use React Query for data fetching and mutations"
+  ],
+  "nonGoals": [
+    "Implementing automated product approval workflows",
+    "Adding payment processing for seller payouts",
+    "Creating a separate seller dashboard or analytics",
+    "Implementing image hosting or CDN integration"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

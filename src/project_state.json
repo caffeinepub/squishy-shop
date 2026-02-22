@@ -1,0 +1,164 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "E-commerce website for selling paper squishies and slime",
+  "architectural_notes": [
+    "E-commerce platform for physical products (paper squishies and slime)",
+    "Requires product catalog management",
+    "Needs payment processing integration"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-product-catalog-page-displaying-paper-squishies-and-slime-products-with-images-names-prices-and-descriptions",
+      "title": "Create a product catalog page displaying paper squishies and slime products with images, names, prices, and descriptions",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-product-detail-pages-that-show-full-product-information-including-multiple-images-detailed-description-price-and-available-variants",
+      "title": "Implement product detail pages that show full product information including multiple images, detailed description, price, and available variants",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-shopping-cart-system-that-allows-users-to-add-products-update-quantities-and-remove-items",
+      "title": "Create a shopping cart system that allows users to add products, update quantities, and remove items",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-checkout-flow-that-collects-shipping-information-and-processes-payments-through-stripe-integration",
+      "title": "Implement a checkout flow that collects shipping information and processes payments through Stripe integration",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-a-playful-fun-visual-theme-with-vibrant-colors-and-whimsical-typography-that-evokes-the-tactile-colorful-nature-of-squishies-and-slime-and-apply-it-consistently-across-all-pages",
+      "title": "Design a playful, fun visual theme with vibrant colors and whimsical typography that evokes the tactile, colorful nature of squishies and slime, and apply it consistently across all pages",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-display-product-images-for-paper-squishies-and-slime-as-static-assets-in-frontend-public-assets-generated",
+      "title": "Generate and display product images for paper squishies and slime as static assets in frontend/public/assets/generated",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-application-title-in-the-html-document-head-from-squishies-shop-to-dino-squad",
+      "title": "Update the application title in the HTML document head from 'Squishies Shop' to 'Dino Squad'",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-header-logo-text-in-the-layout-component-from-squishies-shop-to-dino-squad",
+      "title": "Update the header logo text in the Layout component from 'Squishies Shop' to 'Dino Squad'",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-sell-button-to-the-main-navigation-header-in-the-layout-component-positioned-alongside-the-existing-cart-and-login-buttons",
+      "title": "Add a 'Sell' button to the main navigation header in the Layout component, positioned alongside the existing Cart and Login buttons",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-new-sell-page-route-and-component-that-allows-users-to-list-items-for-sale-including-fields-for-product-name-description-price-category-paper-squishies-or-slime-and-image-upload-capability",
+      "title": "Create a new Sell page route and component that allows users to list items for sale, including fields for product name, description, price, category (Paper Squishies or Slime), and image upload capability",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-connect-the-sell-page-form-to-the-backend-actor-to-submit-new-product-listings-when-users-click-a-submit-for-approval-button",
+      "title": "Connect the Sell page form to the backend actor to submit new product listings when users click a 'Submit for Approval' button",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "E-commerce website with product catalog for paper squishies and slime",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Shopping cart and checkout functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Product listing and detail pages",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Create backend data structures and functions to manage products, including storing product information, retrieving product listings, and fetching individual product details",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Create backend order management system to store and retrieve customer orders with product details, shipping information, and payment status",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Update any references to 'Squishies Shop' in page headings, meta descriptions, or user-facing text to 'Dino Squad'",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Add a sell button to the interface",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Implement backend functionality to accept and store seller product submissions, including product details, seller information (linked to Internet Identity), and approval status",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Squishy Shop",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,67 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add Sell Button and Seller Product Submission Functionality",
+  "requirements": [
+    {
+      "id": "REQ-12",
+      "summary": "Add a 'Sell' button to the main navigation header positioned alongside the existing Cart and Login buttons",
+      "acceptanceCriteria": [
+        "A 'Sell' button is visible in the header navigation",
+        "The button styling matches the existing navigation button pattern",
+        "The button is positioned logically within the header layout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "modify",
+          "description": "Add a 'Sell' navigation button in the header navigation section alongside the existing CartIcon and LoginButton components. The button should navigate to '/sell' route and follow the existing navigation button styling pattern with hover effects and the Dino Squad color scheme."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Create a new Sell page route and component with form for listing items including product name, description, price, category, and image upload",
+      "acceptanceCriteria": [
+        "A new route '/sell' is configured in the router",
+        "The Sell page includes a form with all required fields",
+        "Form validation ensures all required fields are completed",
+        "The page follows the existing Dino Squad visual theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/SellPage.tsx",
+          "operation": "create",
+          "description": "Create a new SellPage component that displays a form for sellers to list products. Include form fields for product name (text input), description (textarea), price (number input in cents), category dropdown (Paper Squishies or Slime), and image upload capability using the blob-storage component's ExternalBlob class for handling file uploads with progress tracking. Include form validation to ensure all required fields are completed before submission. Style the page following the existing Dino Squad visual theme with playful pink-purple-blue colors. Add authentication check to ensure only logged-in users can access this page. Verify the blob-storage component's usage instructions before implementing image upload functionality."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a new route configuration for '/sell' path that renders the SellPage component. Register this route in the TanStack Router configuration alongside existing routes for catalog, product detail, cart, checkout, and payment pages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-15",
+      "summary": "Connect the Sell page form to the backend actor to submit new product listings when users click a 'Submit for Approval' button",
+      "acceptanceCriteria": [
+        "Form submission calls the backend actor method",
+        "Success confirmation is displayed to the user after submission",
+        "Error handling displays appropriate messages if submission fails",
+        "Form is cleared after successful submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add a new React Query mutation hook called useSubmitProductForApproval that calls the backend actor's submitProductForApproval method with the product data from the form. Include success and error handling callbacks, and configure the mutation to invalidate relevant query caches on success. The hook should accept a Product object (matching the backend Product interface with name, description, price, images array, and variants) and return the mutation result including loading state, error state, and mutate function."
+        },
+        {
+          "path": "frontend/src/pages/SellPage.tsx",
+          "operation": "modify",
+          "description": "Integrate the useSubmitProductForApproval hook into the SellPage component. Wire the form submission to call the mutation with collected form data including uploaded images converted to ExternalBlob URLs. Display a success toast notification using the existing toast system when submission succeeds, showing a confirmation message to the user. Display error toast notifications if submission fails with appropriate error messages. Clear all form fields and reset the component state after successful submission. Add a 'Submit for Approval' button that triggers the form submission and shows loading state during the mutation."
+        }
+      ]
+    }
+  ]
+}
